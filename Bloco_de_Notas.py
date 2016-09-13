@@ -1,6 +1,17 @@
+
+class BlocoDeNotas:
+    pass
+
 class Menu:
     def __init__(self):
-        self.blocodenotas = Bloco
+        self.blocodenotas = BlocoDeNotas()
+        self.escolhar = {
+        "1": self.imprimir_notas,
+        "2": self.buscar_notas,
+        "3": self.adicionar_notas,
+        "4": self.modificar_notas,
+        "5": self.sair
+        }
 
 def executar(self): #É executado eternamente apresentado o menu com as escolhas para selecionar uma opção
     while True: #Verdadeiro pra sempre
@@ -22,3 +33,24 @@ def buscar_notas(self):
     filtro = raw_input("Digite o ID da nota: ")
     nota = self.blocodenotas.buscar(filtro)
     self.imprimir_notas(nota)
+    
+def adicionar_notas(self):
+    texto = raw_input("Digite o texto nota: ")
+    self.blocodenotas.nova_nota(texto)
+
+def modificar_notas(self):
+    id = int(raw_input("Digite o ID da nota: ")) #Faz um cast/conversao para inteiro int()
+    texto = raw_input("Digite o novo texto: ")
+    titulo = raw_input("Digite o novo titulo: ")
+    
+    if texto:
+        self.blocodenotas.alterar_texto(id, texto)
+    if titulo:
+        self.blocodenotas.alterar_titulo(id, titulo)
+        
+def sair(self):
+    print ("Saindo ...")
+    sys.exit(0)
+    
+if __name__ == "__main__" #Como se fosse um main
+    Menu().executar()
