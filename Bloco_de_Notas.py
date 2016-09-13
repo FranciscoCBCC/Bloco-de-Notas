@@ -1,3 +1,5 @@
+import sys
+import datetime
 
 class BlocoDeNotas:
     pass
@@ -52,5 +54,6 @@ def sair(self):
     print ("Saindo ...")
     sys.exit(0)
     
-if __name__ == "__main__" #Como se fosse um main
-    Menu().executar()
+if __name__ == "__main__": #Como se fosse um main
+    m = Menu()
+    m = .executar()
