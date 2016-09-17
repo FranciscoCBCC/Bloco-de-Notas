@@ -1,6 +1,7 @@
 import sys
 import datetime
 from BlocoDeNotas import BlocoDeNotas
+from Notas import Notas
 
 class Menu:
     def __init__(self):
@@ -8,7 +9,7 @@ class Menu:
         self.escolhas = {
         "1": self.imprimir_notas,
         "2": self.buscar_notas,
-        "3": self.adicionar_notas,
+        "3": self.blocodenotas.adicionar_notas,
         "4": self.modificar_notas,
         "5": self.sair
         }
@@ -44,9 +45,7 @@ class Menu:
         nota = self.blocodenotas.buscar(filtro)
         self.imprimir_notas(nota)
     
-    def adicionar_notas(self):
-        texto = input("Digite o texto nota: ")
-        self.blocodenotas.nova_nota(texto)
+    
 
     def modificar_notas(self):
         id = int(input("Digite o ID da nota: ")) #Faz um cast/conversao para inteiro int()

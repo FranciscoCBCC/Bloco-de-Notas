@@ -1,17 +1,18 @@
 print("Classe BlocoDeNotas")
 
-
+from Notas import Notas
 
 class BlocoDeNotas:
     notas = []
     def __init__(self):
-        pass
-        
+        self.notasObj = Notas()
+                
     def buscar(self):
         pass
         
-    def nova_nota(self):
-        pass
+    def adicionar_notas(self):
+        texto = input("Digite o texto da nota: ")
+        self.notasObj.setTexto(texto)
     
     def alterar_texto(self):
         pass
