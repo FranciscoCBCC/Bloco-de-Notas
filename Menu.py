@@ -1,8 +1,6 @@
 import sys
 import datetime
-
-class BlocoDeNotas:
-    pass
+from BlocoDeNotas import BlocoDeNotas
 
 class Menu:
     def __init__(self):
