@@ -28,7 +28,7 @@ class Menu:
     def executar(self): #É executado eternamente apresentado o menu com as escolhas para selecionar uma opção
         while True: #Verdadeiro pra sempre
             self.apresentar_menu #mostra o metodo apresentar menu
-            escolha = raw_input("escolha uma opcao: ") #Tipo um scanf no C
+            escolha = input("escolha uma opcao: ") #Tipo um scanf no C; Antigo raw_input
             acao = self.escolhas.get(str(escolha)) #Get=Busca no dicionario, é um metodo do python
             if acao:
                 acao()
@@ -42,18 +42,18 @@ class Menu:
             print("{0}: {1}\n{2}".format(n.id,n.titulo, n.texto))
         
     def buscar_notas(self):
-        filtro = raw_input("Digite o ID da nota: ")
+        filtro = input("Digite o ID da nota: ")
         nota = self.blocodenotas.buscar(filtro)
         self.imprimir_notas(nota)
     
     def adicionar_notas(self):
-        texto = raw_input("Digite o texto nota: ")
+        texto = input("Digite o texto nota: ")
         self.blocodenotas.nova_nota(texto)
 
     def modificar_notas(self):
-        id = int(raw_input("Digite o ID da nota: ")) #Faz um cast/conversao para inteiro int()
-        texto = raw_input("Digite o novo texto: ")
-        titulo = raw_input("Digite o novo titulo: ")
+        id = int(input("Digite o ID da nota: ")) #Faz um cast/conversao para inteiro int()
+        texto = input("Digite o novo texto: ")
+        titulo = input("Digite o novo titulo: ")
     
         if texto:
             self.blocodenotas.alterar_texto(id, texto)

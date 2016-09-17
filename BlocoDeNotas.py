@@ -2,7 +2,7 @@ print("Classe BlocoDeNotas")
 
 
 
-class blocoDeNotas:
+class BlocoDeNotas:
     notas = []
     def __init__(self):
         pass
