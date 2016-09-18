@@ -37,7 +37,8 @@ class BlocoDeNotas:
         if not nota:
             nota = self.notas #Deve ter uma lista para as notas
         for n in nota:
-            print("{0}: {1}\n{2}".format(self.indice,n.notasObj.titulo,n.notasObj.id))
+            print("{0}: {1}\n{2}".format(n.indice,n.notasObj.titulo,n.notasObj.id))
+            
     
     def alterar_texto(self):
         pass
