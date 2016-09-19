@@ -5,7 +5,7 @@ import random
 
 class BlocoDeNotas:
     notas = []
-    indice = 0
+    #indice = 0
     def __init__(self):
         self.notasObj = Notas()
                 
@@ -13,7 +13,7 @@ class BlocoDeNotas:
         pass
         
     def adicionar_notas(self):
-        self.__class__.indice += 1
+        #self.__class__.indice += 1
         texto = input("Digite o texto da nota: ")
         self.notasObj.setTexto(texto)
         titulo = input("Digite o titulo da nota: ")
@@ -37,7 +37,7 @@ class BlocoDeNotas:
         if not nota:
             nota = self.notas #Deve ter uma lista para as notas
         for n in nota:
-            print("{0}: {1}\n{2}".format(n.indice,n.notasObj.titulo,n.notasObj.id))
+            print(n)
             
     
     def alterar_texto(self):

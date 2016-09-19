@@ -20,4 +20,7 @@ class Notas:
     
     def setIndice(self, indice):
         self.indice = indice
+        
+    def __str__(self):
+        return ("Identificador %i nota %s"%(self.id, self.texto))
     
