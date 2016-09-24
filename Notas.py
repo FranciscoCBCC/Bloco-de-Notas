@@ -30,9 +30,11 @@ class Notas:
         
     def __str__(self):
         return ("""
-        Nota:
-        Indice: %i \n
+        Nota(s):
+        %i: \n
+        ID: %i \n
         Titulo: %s \n
         Texto: %s \n
-        """%(self.indice, self.titulo, self.texto))
+        Data de Criacao: %s \n
+        """%(self.indice, self.id, self.titulo, self.texto, self.data))
     

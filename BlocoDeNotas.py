@@ -2,6 +2,7 @@ print("Classe BlocoDeNotas")
 
 from Notas import Notas
 import random
+import datetime
 
 class BlocoDeNotas:
 
@@ -16,9 +17,9 @@ class BlocoDeNotas:
         texto = input("Digite o texto da nota: ")
         titulo = input("Digite o titulo da nota: ")
         id = random.randrange(0, 100);    
-        data = input("Digite a data da nota: ")
         self.indice += 1
-        self.notas.append(Notas(id, texto, titulo, data, self.indice))
+        self.data = str(datetime.datetime.now())[:19]
+        self.notas.append(Notas(id, texto, titulo, self.data, self.indice))
             
     def imprimir_notas(self, nota=None):
         if not nota:
