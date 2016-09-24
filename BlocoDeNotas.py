@@ -1,4 +1,4 @@
-print("Classe BlocoDeNotas")
+#print("Classe BlocoDeNotas")
 
 from Notas import Notas
 import random
