@@ -9,7 +9,7 @@ class Menu:
         "2": self.blocodenotas.buscar_notas,
         "3": self.blocodenotas.adicionar_notas,
         "4": self.blocodenotas.remover_notas,
-        "5": self.modificar_notas,
+        "5": self.blocodenotas.modificar_notas,
         "6": self.sair
         }
         
@@ -33,17 +33,7 @@ class Menu:
                 acao()
             else:
                 print ("{0} nao foi uma escolha valida.".format(escolha))
-              
-    def modificar_notas(self):
-        id = int(input("Digite o ID da nota: ")) #Faz um cast/conversao para inteiro int()
-        texto = input("Digite o novo texto: ")
-        titulo = input("Digite o novo titulo: ")
-    
-        if texto:
-            self.blocodenotas.alterar_texto(id, texto)
-        if titulo:
-            self.blocodenotas.alterar_titulo(id, titulo)
-        
+         
     def sair(self):
         print ("Saindo ...")
         sys.exit(0)

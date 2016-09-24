@@ -13,8 +13,8 @@ class Notas:
         self.data = data
         self.indice = indice        
         
-    def setId(self, id):
-        self.id = id
+    #def setId(self, id):
+     #   self.id = id
     
     def getId(self):
         return self.id
@@ -25,11 +25,11 @@ class Notas:
     def setTitulo(self, titulo):
         self.titulo = titulo
     
-    def setData(self, data):
-        self.data = data
+    #def setData(self, data):
+     #   self.data = data
     
-    def setIndice(self, indice):
-        self.indice = indice
+    #def setIndice(self, indice):
+     #   self.indice = indice
         
     def __str__(self):
         return ("""

@@ -55,10 +55,19 @@ class BlocoDeNotas:
         else:
             print("Não há notas")
 
-    
-    def alterar_texto(self):
-        pass
-        
-    def alterar_titulo(self):
-        pass
+    def modificar_notas(self):
+        if (self.indice != 0):
+            id = int(input("Digite o ID da nota: ")) #Faz um cast/conversao para inteiro int()
+            for i in self.notas:
+                if id == i.getId():
+                    texto = input("Digite o novo texto: ")
+                    titulo = input("Digite o novo titulo: ")
+                    i.setTexto(texto)
+                    i.setTitulo(titulo)
+                    print("A nota foi alterada:")
+                else:
+                    print("ID nao encontrado")
+        else:
+            print("Não há notas")
+            
         
