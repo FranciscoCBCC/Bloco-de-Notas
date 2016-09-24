@@ -1,5 +1,4 @@
 import sys
-import datetime
 from BlocoDeNotas import BlocoDeNotas
 
 class Menu:
@@ -9,8 +8,9 @@ class Menu:
         "1": self.blocodenotas.imprimir_notas,
         "2": self.blocodenotas.buscar_notas,
         "3": self.blocodenotas.adicionar_notas,
-        "4": self.modificar_notas,
-        "5": self.sair
+        "4": self.blocodenotas.remover_notas,
+        "5": self.modificar_notas,
+        "6": self.sair
         }
         
     def apresentar_menu(self):
@@ -19,8 +19,9 @@ class Menu:
         1. Imprimir Notas
         2. Buscar Notas
         3. Adicionar Notas
-        4. Modificar Notas
-        5. Sair        
+        4. Remover Notas
+        5. Modificar Notas
+        6. Sair        
         """)
 
     def executar(self): #É executado eternamente apresentado o menu com as escolhas para selecionar uma opção

@@ -33,8 +33,7 @@ class Notas:
         
     def __str__(self):
         return ("""
-        Nota(s):
-        %i: \n
+        Nota %i: \n
         ID: %i \n
         Titulo: %s \n
         Texto: %s \n
