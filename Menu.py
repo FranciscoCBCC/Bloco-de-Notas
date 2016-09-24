@@ -7,7 +7,7 @@ class Menu:
         self.blocodenotas = BlocoDeNotas()
         self.escolhas = {
         "1": self.blocodenotas.imprimir_notas,
-        "2": self.buscar_notas,
+        "2": self.blocodenotas.buscar_notas,
         "3": self.blocodenotas.adicionar_notas,
         "4": self.modificar_notas,
         "5": self.sair
@@ -33,15 +33,6 @@ class Menu:
             else:
                 print ("{0} nao foi uma escolha valida.".format(escolha))
               
-    
-            
-    def buscar_notas(self):
-        filtro = input("Digite o ID da nota: ")
-        nota = self.blocodenotas.buscar(filtro)
-        self.imprimir_notas(nota)
-    
-    
-
     def modificar_notas(self):
         id = int(input("Digite o ID da nota: ")) #Faz um cast/conversao para inteiro int()
         texto = input("Digite o novo texto: ")
