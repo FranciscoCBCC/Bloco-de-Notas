@@ -6,6 +6,13 @@ class Notas:
         self.data = data
         self.indice = indice
         
+    def setNota(self, id, texto, titulo, data, indice):        
+        self.id = id
+        self.texto = texto
+        self.titulo = titulo
+        self.data = data
+        self.indice = indice        
+        
     def setId(self, id):
         self.id = id
         
@@ -22,5 +29,10 @@ class Notas:
         self.indice = indice
         
     def __str__(self):
-        return ("Identificador %i nota %s"%(self.id, self.texto))
+        return ("""
+        Nota:
+        Indice: %i \n
+        Titulo: %s \n
+        Texto: %s \n
+        """%(self.indice, self.titulo, self.texto))
     

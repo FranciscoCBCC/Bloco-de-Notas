@@ -4,35 +4,22 @@ from Notas import Notas
 import random
 
 class BlocoDeNotas:
-    notas = []
-    #indice = 0
+
     def __init__(self):
-        self.notasObj = Notas()
+        self.notas = []
+        self.indice = 0
                 
     def buscar(self):
         pass
         
     def adicionar_notas(self):
-        #self.__class__.indice += 1
         texto = input("Digite o texto da nota: ")
-        self.notasObj.setTexto(texto)
         titulo = input("Digite o titulo da nota: ")
-        self.notasObj.setTitulo(titulo)
-        
-        #for i in range(10):
-        #    id= random.random()
+        id = random.randrange(0, 100);    
+        data = input("Digite a data da nota: ")
+        self.indice += 1
+        self.notas.append(Notas(id, texto, titulo, data, self.indice))
             
-            
-        def gera_random():
-            return random.randrange(10)            
-            
-        id = gera_random()    
-            
-                   
-        self.notasObj.setId(id)
-        
-        self.__class__.notas.append(self)
-        
     def imprimir_notas(self, nota=None):
         if not nota:
             nota = self.notas #Deve ter uma lista para as notas
