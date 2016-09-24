@@ -10,8 +10,8 @@ class BlocoDeNotas:
         self.notas = []
         self.indice = 0
                 
-    def buscar(self):
-        pass
+    #def buscar(self):
+        #pass
         
     def adicionar_notas(self):
         texto = input("Digite o texto da nota: ")
